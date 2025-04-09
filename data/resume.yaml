@@ -1,0 +1,110 @@
+name: Jane Doe
+contact:
+  email: jane.doe@example.com
+  phone: 555-123-4567
+  location: San Francisco, CA
+  linkedin: www.linkedin.com/in/janedoe
+  github: https://github.com/janedoe
+summary: 'Software Engineer with 6+ years of experience designing and developing full-stack
+  web applications and cloud-based solutions. Strong background in building scalable
+  APIs, optimizing system performance, and mentoring junior developers. Passionate
+  about clean code, modern DevOps practices, and solving complex problems through
+  collaboration.
+
+  '
+education:
+- degree: Master of Science, Computer Science
+  school: Stanford University
+  graduation_year: 2020
+- degree: Bachelor of Science, Computer Engineering
+  school: University of California, Berkeley
+  graduation_year: 2016
+experience:
+- title: Senior Software Engineer
+  company: CloudHaven
+  location: Remote
+  start_date: 2021-03
+  end_date: 2025-01
+  description: 'Led the design and development of scalable backend systems, REST APIs,
+    and cloud orchestration tools for a cloud-native platform serving enterprise DevOps
+    teams.
+
+    '
+  tasks:
+  - content: Architected microservices and APIs using Python and Node.js.
+    impact: Enabled deployment speed increase of 40% and reduced failure rates.
+  - content: Migrated infrastructure to Kubernetes with Helm.
+    impact: Cut deployment times and increased system stability.
+  - content: Introduced automated testing pipeline with GitHub Actions.
+    impact: Boosted code quality and reduced regressions by 60%.
+  - content: Mentored junior devs and conducted regular code reviews.
+    impact: Improved team productivity and codebase maintainability.
+- title: Software Engineer
+  company: BrightLab
+  location: Mountain View, CA
+  start_date: 2018-01
+  end_date: 2021-03
+  description: 'Developed and maintained backend systems and internal tooling for
+    an adaptive learning platform.
+
+    '
+  tasks:
+  - content: Built Lambda-based ETL pipelines for analytics features.
+  - content: Designed APIs to support new ML-based content recommendation system.
+  - content: Refactored legacy services to improve scalability and maintainability.
+  - content: Led cross-functional efforts to integrate third-party assessment tools.
+- title: Junior Software Engineer
+  company: Nexio Technologies
+  location: San Jose, CA
+  start_date: 2016-06
+  end_date: 2017-12
+  description: 'Supported web development and internal tool building in a fast-paced
+    B2B SaaS startup.
+
+    '
+  tasks:
+  - content: Built internal dashboards using Flask and Vue.js.
+  - content: Integrated external APIs including Stripe and Salesforce.
+  - content: Improved database queries to enhance performance by 50%.
+  - content: Maintained unit and integration test suites.
+projects:
+- title: DevOps Dashboard
+  url: https://github.com/janedoe/devops-dashboard
+  description: 'A real-time dashboard built with Flask, React, and Redis for monitoring
+    server health, build status, and application logs across multiple environments.
+
+    '
+- title: Smart Study Planner
+  url: https://github.com/janedoe/smart-study-planner
+  description: 'A personalized study planning app that adapts to user pace using spaced
+    repetition and calendar sync features.
+
+    '
+skills:
+- .NET
+- AWS
+- Agile
+- C#
+- CI/CD
+- DevOps
+- Django
+- Docker
+- Flask
+- GCP
+- Git
+- GitOps
+- JavaScript
+- Kafka
+- Kubernetes
+- Microservices
+- MongoDB
+- Node.js
+- Outage Coordination
+- PostgreSQL
+- Python
+- REST APIs
+- React
+- Redis
+- SQL
+- Unit Testing
+- communication

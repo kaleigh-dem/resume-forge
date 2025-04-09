@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{ name }} Resume</title>
+  <style>
+    body {
+      font-family: "Times New Roman", Times, serif;
+      line-height: 1.2;
+      margin: 0.5in;
+      min-height: 10in;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    ul {
+      margin-top: 0;
+      margin-bottom: 10px;
+      padding-left: 20px;
+    }
+
+    .name {
+      text-transform: uppercase;
+      font-size: 19.5pt;
+      text-align: center;
+      display: block;
+      margin-bottom: 3pt;
+    }
+
+    .title {
+      text-transform: uppercase;
+      font-size: 10.5pt;
+      text-align: center;
+    }
+
+    .contact {
+      font-size: 7.5pt;
+      text-align: center;
+      margin-top: 7pt;
+      margin-bottom: 7pt;
+    }
+
+    .summary {
+      font-style: italic;
+      font-size: 8.5pt;
+      text-align: center;
+    }
+
+    .section-heading {
+      font-size: 10.5pt;
+      text-align: center;
+      margin-top: 10pt;
+      margin-bottom: 7pt;
+    }
+
+    .skills-text {
+      font-size: 8.5pt;
+      text-align: left;
+      width: 100%;
+      display: block;
+    }
+
+    .text-center {
+      font-size: 8.5pt;
+      text-align: center;
+    }
+
+    .c-flex {
+      display: flex;
+      justify-content: space-between;
+      font-size: 8.5pt;
+      margin-bottom: 5px;
+    }
+
+    .job-bullets {
+      font-size: 8.5pt;
+      text-align: left;
+      margin-left: -5px;
+      margin-bottom: 10px;
+    }
+
+    .job-title {
+      font-size: 8.5pt;
+      text-align: left;
+    }
+
+    hr {
+      margin-bottom: 0;
+    }
+
+    .content-wrapper {
+      flex-grow: 1;
+    }
+  </style>
+</head>
+<body class="doc-content">
+  <div class="content-wrapper">
+  <p class="name">{{ name }}</p>
+  <p class="text-center"><span class="title">• {{ title }} •</span></p>
+  <p class="contact">C: {{ phone }}    |    {{ email }}    |    {{ location }}    |    {{ linkedin }}</p>
+
+  <p class="summary">{{ summary }}</p>
+
+  <hr>
+  <p class="section-heading"><span class="section-heading">• EDUCATION •</span></p>
+  {% for edu in education %}
+    <p class="text-center"><strong class="edu-text">{{ edu.institution }}</strong> - <span class="edu-text">{{ edu.degree }}</span></p>
+  {% endfor %}
+
+  <hr>
+  <p class="section-heading"><span class="section-heading">• SKILLS •</span></p>
+  {% for category, items in skills.items() %}
+    <p class="skills-text"><strong>{{ category }}</strong>: {{ items | join(' | ') }}</p>
+  {% endfor %}
+
+  <hr>
+  <p class="section-heading"><span class="section-heading">• WORK EXPERIENCE •</span></p>
+  {% for job in work_experience %}
+    <p class="job-title"><span class="edu-text">{{ job.title | upper }}</span></p>
+    <div class="c-flex">
+      <span>{{ job.company }}</span>
+      <span>{{ job.start_date }} – {{ job.end_date }}</span>
+    </div>
+    <ul class="job-bullets">
+      {% for bullet in job.bullets %}
+        <li>{{ bullet }}</li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+  {% if projects %}
+  <hr>
+  <p class="section-heading"><span class="section-heading">• PROJECTS •</span></p>
+  {% for project in projects %}
+    <div style="margin-bottom: 10px;">
+      <p class="job-title"><span class="edu-text">{{ project.title | upper }}</span></p>
+      {% if project.url %}
+        <p class="skills-text" style="margin-bottom: 4px;"><a href="{{ project.url }}">{{ project.url }}</a></p>
+      {% endif %}
+      <p class="skills-text">{{ project.description }}</p>
+    </div>
+  {% endfor %}
+  {% endif %}
+  </div>
+</body>
+</html>

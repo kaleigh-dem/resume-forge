@@ -1,0 +1,3 @@
+prune_irrelevant: true
+prioritize_relevance: true
+include_projects: true
